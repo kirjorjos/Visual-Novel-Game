@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c48bipylrcwrb"]
+
+[ext_resource type="Script" uid="uid://eo4vjm1uokmm" path="res://TitleScreen.cs" id="1_fnlyl"]
+
+[node name="TitleScreen" type="Control" unique_id=857757093]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fnlyl")
+
+[node name="GameTitle" type="Label" parent="." unique_id=2012422726]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 540.0
+theme_override_font_sizes/font_size = 300
+text = "Goose Game"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1970625463]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=231268684]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="PlayButton" type="Button" parent="CenterContainer/HBoxContainer" unique_id=1552092373]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 150
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/HBoxContainer" unique_id=1094625662]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 150
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PlayButton" to="." method="OnPlayButtonPress"]
