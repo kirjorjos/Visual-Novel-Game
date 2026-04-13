@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cfotjd4g4j7vq"]
+
+[ext_resource type="Texture2D" uid="uid://c76rkgebbxoxu" path="res://assets/main_background.jpg" id="1_cb5hs"]
+[ext_resource type="Script" uid="uid://dwvc1jhnobn8x" path="res://Player.cs" id="2_m50br"]
+[ext_resource type="Texture2D" uid="uid://brftsjr0in8u" path="res://assets/player/PlayerModel_Idle1.png" id="3_p40m6"]
+[ext_resource type="Texture2D" uid="uid://bf88mwh3elrjv" path="res://assets/player/PlayerModel_Idle2.png" id="4_0rh38"]
+[ext_resource type="Texture2D" uid="uid://eajahsf5ai1p" path="res://assets/player/PlayerModel_Jump.png" id="5_78kfj"]
+[ext_resource type="Texture2D" uid="uid://clipx2d5wfhbk" path="res://assets/player/PlayerModel_Walk1.png" id="6_ivlct"]
+[ext_resource type="Texture2D" uid="uid://betsrvymf3wwg" path="res://assets/player/PlayerModel_Walk2.png" id="7_d1soc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7u77"]
+size = Vector2(2046.5, 47)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dol1n"]
+a = Vector2(-1025, 146)
+b = Vector2(-1025, -147)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u86cj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_p40m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0rh38")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_78kfj")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ivlct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d1soc")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_puqvf"]
+radius = 24.0
+height = 128.0
+
+[node name="MainLevel" type="Node2D" unique_id=1632774236]
+
+[node name="BackgroundContainer" type="StaticBody2D" parent="." unique_id=1270365983]
+position = Vector2(1024, 144)
+
+[node name="Background" type="Sprite2D" parent="BackgroundContainer" unique_id=1904880072]
+texture = ExtResource("1_cb5hs")
+
+[node name="Floor" type="CollisionShape2D" parent="BackgroundContainer" unique_id=333745710]
+position = Vector2(3.25, 113.5)
+shape = SubResource("RectangleShape2D_l7u77")
+
+[node name="LeftWall" type="CollisionShape2D" parent="BackgroundContainer" unique_id=583601582]
+shape = SubResource("SegmentShape2D_dol1n")
+
+[node name="RightWall" type="CollisionShape2D" parent="BackgroundContainer" unique_id=928016249]
+position = Vector2(2050, 0)
+shape = SubResource("SegmentShape2D_dol1n")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=330427928]
+position = Vector2(64, 159)
+script = ExtResource("2_m50br")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=346514443]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_u86cj")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=818341366]
+shape = SubResource("CapsuleShape2D_puqvf")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1322415569]
+position = Vector2(959, -12)
+offset = Vector2(-775, -2)
+zoom = Vector2(3.85, 3.85)
+limit_left = 775
+limit_top = 0
+limit_right = 2822
+limit_bottom = 282
+limit_smoothed = true
+position_smoothing_enabled = true
+editor_draw_limits = true

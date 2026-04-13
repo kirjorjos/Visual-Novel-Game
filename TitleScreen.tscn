@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c48bipylrcwrb"]
+
+[ext_resource type="Script" uid="uid://eo4vjm1uokmm" path="res://TitleScreen.cs" id="1_fnlyl"]
+[ext_resource type="Texture2D" uid="uid://cay7igm82hy1g" path="res://assets/titlescreen.jpg" id="2_pkhjh"]
+
+[node name="Control" type="Control" unique_id=461870503]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fnlyl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1624744799]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1025469045]
+scale = Vector2(0.889, 0.889)
+texture = ExtResource("2_pkhjh")
+offset = Vector2(1079.865, 809.8988)
+
+[node name="PlayButton" type="Button" parent="CanvasLayer" unique_id=1552092373]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 489.0
+offset_top = 757.0
+offset_right = 830.0
+offset_bottom = 940.0
+pivot_offset = Vector2(218, 139)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_font_sizes/font_size = 150
+
+[node name="QuitButton" type="Button" parent="CanvasLayer" unique_id=1094625662]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 1145.0
+offset_top = 760.0
+offset_right = 1475.0
+offset_bottom = 947.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 150
+
+[connection signal="pressed" from="CanvasLayer/PlayButton" to="." method="OnPlayButtonPress"]
+[connection signal="pressed" from="CanvasLayer/QuitButton" to="." method="OnQuitButtonPress"]
