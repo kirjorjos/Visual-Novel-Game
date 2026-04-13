@@ -13,7 +13,8 @@ script = ExtResource("1_fnlyl")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1624744799]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1025469045]
-scale = Vector2(0.889, 0.889)
+position = Vector2(-116.49391, -265.6269)
+scale = Vector2(0.9968782, 0.9897866)
 texture = ExtResource("2_pkhjh")
 offset = Vector2(1079.865, 809.8988)
 
@@ -21,9 +22,9 @@ offset = Vector2(1079.865, 809.8988)
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 489.0
-offset_top = 757.0
+offset_top = 563.0
 offset_right = 830.0
-offset_bottom = 940.0
+offset_bottom = 698.0
 pivot_offset = Vector2(218, 139)
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -39,9 +40,9 @@ theme_override_font_sizes/font_size = 150
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 offset_left = 1145.0
-offset_top = 760.0
+offset_top = 566.0
 offset_right = 1475.0
-offset_bottom = 947.0
+offset_bottom = 701.0
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 150
 

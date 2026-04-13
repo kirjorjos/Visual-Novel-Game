@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://eajahsf5ai1p" path="res://assets/player/PlayerModel_Jump.png" id="5_78kfj"]
 [ext_resource type="Texture2D" uid="uid://clipx2d5wfhbk" path="res://assets/player/PlayerModel_Walk1.png" id="6_ivlct"]
 [ext_resource type="Texture2D" uid="uid://betsrvymf3wwg" path="res://assets/player/PlayerModel_Walk2.png" id="7_d1soc"]
+[ext_resource type="Texture2D" uid="uid://ujgkwbvqy742" path="res://assets/geese/normal_goose_look_still.png" id="8_dol1n"]
+[ext_resource type="Texture2D" uid="uid://c787ydgpr0gi6" path="res://assets/geese/normal_goose_still.png" id="9_u86cj"]
+[ext_resource type="Texture2D" uid="uid://b6knry6nau3p" path="res://assets/geese/sick_goose_look_still.png" id="10_puqvf"]
+[ext_resource type="Texture2D" uid="uid://d26gvou74ul8g" path="res://assets/geese/normal_goose_sit.png" id="11_cmshu"]
+[ext_resource type="Texture2D" uid="uid://di4ujhaasbkb8" path="res://assets/geese/sick_goose_sit.png" id="12_xn14s"]
+[ext_resource type="Texture2D" uid="uid://c61lraj4y6so2" path="res://assets/geese/normal_goose_look_walk.png" id="13_1h6ra"]
+[ext_resource type="Texture2D" uid="uid://c18p0p0hugy24" path="res://assets/geese/normal_goose_walk.png" id="14_f08mq"]
+[ext_resource type="Texture2D" uid="uid://bynbtwaenkqbv" path="res://assets/geese/sick_goose_look_walk.png" id="15_4sn81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7u77"]
 size = Vector2(2046.5, 47)
@@ -52,10 +60,80 @@ animations = [{
 radius = 24.0
 height = 128.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_tx3db"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dol1n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_u86cj")
+}],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_puqvf")
+}],
+"loop": true,
+"name": &"idlesick1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_cmshu")
+}],
+"loop": true,
+"name": &"sitting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_xn14s")
+}],
+"loop": true,
+"name": &"sittingsick",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_1h6ra")
+}],
+"loop": true,
+"name": &"walking1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_f08mq")
+}],
+"loop": true,
+"name": &"walking2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_4sn81")
+}],
+"loop": true,
+"name": &"walkingsick1",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7edlk"]
+
 [node name="MainLevel" type="Node2D" unique_id=1632774236]
 
 [node name="BackgroundContainer" type="StaticBody2D" parent="." unique_id=1270365983]
 position = Vector2(1024, 144)
+metadata/_edit_group_ = true
 
 [node name="Background" type="Sprite2D" parent="BackgroundContainer" unique_id=1904880072]
 texture = ExtResource("1_cb5hs")
@@ -74,6 +152,7 @@ shape = SubResource("SegmentShape2D_dol1n")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=330427928]
 position = Vector2(64, 159)
 script = ExtResource("2_m50br")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=346514443]
 scale = Vector2(0.2, 0.2)
@@ -95,3 +174,16 @@ limit_bottom = 282
 limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=929765084]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=388871147]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=1481249308]
+sprite_frames = SubResource("SpriteFrames_tx3db")
+animation = &"sittingsick"
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=186563512]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=148501816]
+shape = SubResource("CapsuleShape2D_7edlk")
