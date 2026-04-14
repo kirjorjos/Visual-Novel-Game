@@ -186,7 +186,8 @@ shape = SubResource("CapsuleShape2D_dol1n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose1" unique_id=1481249308]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tx3db")
-animation = &"sittingsick"
+animation = &"idle2"
+autoplay = "idle2"
 
 [node name="goose2" type="Area2D" parent="." unique_id=471185137]
 position = Vector2(600, 195)
@@ -197,7 +198,7 @@ shape = SubResource("CapsuleShape2D_dol1n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose2" unique_id=65920441]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tx3db")
-animation = &"sittingsick"
+animation = &"walking1"
 
 [node name="goose3" type="Area2D" parent="." unique_id=2062233551]
 position = Vector2(900, 195)
@@ -208,7 +209,7 @@ shape = SubResource("CapsuleShape2D_dol1n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose3" unique_id=600648820]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tx3db")
-animation = &"sittingsick"
+animation = &"walking2"
 
 [node name="goose4" type="Area2D" parent="." unique_id=784821229]
 position = Vector2(1200, 195)
@@ -219,7 +220,7 @@ shape = SubResource("CapsuleShape2D_dol1n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose4" unique_id=1225138441]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tx3db")
-animation = &"sittingsick"
+animation = &"idlesick1"
 
 [node name="goose5" type="Area2D" parent="." unique_id=1030261854]
 position = Vector2(1500, 195)
@@ -241,4 +242,4 @@ shape = SubResource("CapsuleShape2D_dol1n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose6" unique_id=676196127]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tx3db")
-animation = &"sittingsick"
+animation = &"sitting"

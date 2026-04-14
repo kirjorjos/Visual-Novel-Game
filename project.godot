@@ -22,8 +22,19 @@ Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"goose_healthy": "res://characters/goose_healthy.dch",
+"goose_sick": "res://characters/goose_sick.dch",
+"player": "res://characters/player.dch"
+}
+directories/dtl_directory={
+"goose1": "res://scenes/goose1.dtl",
+"goose2": "res://scenes/goose2.dtl",
+"goose3": "res://scenes/goose3.dtl",
+"goose4": "res://scenes/goose4.dtl",
+"goose5": "res://scenes/goose5.dtl",
+"goose6": "res://scenes/goose6.dtl"
+}
 layout/style_directory={}
 
 [display]
