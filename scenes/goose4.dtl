@@ -6,4 +6,5 @@ player: Ooh, another goose! Should I give this one a hug?
 	[end_timeline]
 - No
 	player: More than halfway there!
+	[end_timeline]
 [wait_input]

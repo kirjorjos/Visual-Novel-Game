@@ -3,6 +3,8 @@ join goose_healthy right
 player: Oh look, another goose! Should I pet it?
 - Yes
 	player: Ouch!! I felt teeth.
+	[end_timeline]
 - No
 	player: Let's make it to class!
+	[end_timeline]
 [wait_input]

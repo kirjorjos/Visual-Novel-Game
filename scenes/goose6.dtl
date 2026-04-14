@@ -6,4 +6,5 @@ player: Another goose!! Should I go for the hug?
 	[end_timeline]
 - No
 	player: Not today goose!!!
+	[end_timeline]
 [wait_input]

@@ -3,6 +3,8 @@ join goose_healthy right
 player: I see another goose... shall I give it a hug?
 - Yes
 	player: Ouch!! Damn goose. (Totally the goose's fault)
+	[end_timeline]
 - No
 	player: No time for love!
+	[end_timeline]
 [wait_input]

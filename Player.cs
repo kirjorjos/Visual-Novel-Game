@@ -3,7 +3,7 @@ using System;
 
 public partial class Player : CharacterBody2D {
 	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	public const float JumpVelocity = -500.0f;
 	public AnimatedSprite2D animation;
 
 	DialogicWrapper dialogic;
@@ -25,6 +25,8 @@ public partial class Player : CharacterBody2D {
 		if (!IsOnFloor()) {
 			velocity += GetGravity() * (float)delta;
 		}
+                 
+                if (DialogicWrapper.activeDialogue) return;
 
 		// Handle Jump.
 		if (Input.IsActionJustPressed("up") && IsOnFloor()) {
@@ -68,4 +70,9 @@ public partial class Player : CharacterBody2D {
 	public void _on_goose_6_body_entered(Node2D body) {
 		dialogic.Start("goose6");
 	}
+
+	public void _on_game_end_body_entered(Node2D body) {
+  		dialogic.Start("game_end");
+	}
+
 }

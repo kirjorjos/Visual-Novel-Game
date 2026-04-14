@@ -6,4 +6,5 @@ player: This goose looks sick... should I pick it up and take it to the Wellness
 	[end_timeline]
 - No
 	player: Almost there!!
+	[end_timeline]
 [wait_input]
