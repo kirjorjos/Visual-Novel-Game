@@ -1,0 +1,8 @@
+join player left
+join goose_healthy right
+player: Oh look, another goose! Should I pet it?
+- Yes
+	player: Ouch!! I felt teeth.
+- No
+	player: Let's make it to class!
+[wait_input]

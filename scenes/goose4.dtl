@@ -1,0 +1,9 @@
+join player left
+join goose_sick right
+player: Ooh, another goose! Should I give this one a hug?
+- Yes
+	player: Oof... I don't feel so good...
+	[end_timeline]
+- No
+	player: More than halfway there!
+[wait_input]

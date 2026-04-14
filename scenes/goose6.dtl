@@ -1,0 +1,9 @@
+join player left
+join goose_sick right
+player: Another goose!! Should I go for the hug?
+- Yes
+	player: Oof, I don't feel so good...
+	[end_timeline]
+- No
+	player: Not today goose!!!
+[wait_input]
