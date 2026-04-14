@@ -243,3 +243,10 @@ shape = SubResource("CapsuleShape2D_dol1n")
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tx3db")
 animation = &"sitting"
+
+[connection signal="body_entered" from="goose1" to="Player" method="_on_goose_1_body_entered"]
+[connection signal="body_entered" from="goose2" to="Player" method="_on_goose_2_body_entered"]
+[connection signal="body_entered" from="goose3" to="Player" method="_on_goose_3_body_entered"]
+[connection signal="body_entered" from="goose4" to="Player" method="_on_goose_4_body_entered"]
+[connection signal="body_entered" from="goose5" to="Player" method="_on_goose_5_body_entered"]
+[connection signal="body_shape_entered" from="goose6" to="Player" method="_on_goose_6_body_shape_entered"]

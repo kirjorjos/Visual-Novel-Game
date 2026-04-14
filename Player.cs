@@ -6,8 +6,11 @@ public partial class Player : CharacterBody2D {
 	public const float JumpVelocity = -400.0f;
 	public AnimatedSprite2D animation;
 
+	DialogicWrapper dialogic;
+
 	public override void _Ready() {
 		animation = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		dialogic = new DialogicWrapper(this);
 	}
 
 	public override void _PhysicsProcess(double delta) {
@@ -40,5 +43,29 @@ public partial class Player : CharacterBody2D {
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	public void _on_goose_1_body_entered(Node2D body) {
+		dialogic.Start("goose1");
+	}
+
+	public void _on_goose_2_body_entered(Node2D body) {
+		dialogic.Start("goose2");
+	}
+
+	public void _on_goose_3_body_entered(Node2D body) {
+		dialogic.Start("goose3");
+	}
+
+	public void _on_goose_4_body_entered(Node2D body) {
+		dialogic.Start("goose4");
+	}
+
+	public void _on_goose_5_body_entered(Node2D body) {
+		dialogic.Start("goose5");
+	}
+
+	public void _on_goose_6_body_entered(Node2D body) {
+		dialogic.Start("goose6");
 	}
 }
