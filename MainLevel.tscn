@@ -177,13 +177,68 @@ limit_smoothed = true
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1045348788]
-position = Vector2(50, 195)
+[node name="goose1" type="Area2D" parent="." unique_id=1045348788]
+position = Vector2(300, 195)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=984688509]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goose1" unique_id=984688509]
 shape = SubResource("CapsuleShape2D_dol1n")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=1481249308]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose1" unique_id=1481249308]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_tx3db")
+animation = &"sittingsick"
+
+[node name="goose2" type="Area2D" parent="." unique_id=471185137]
+position = Vector2(600, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goose2" unique_id=702722220]
+shape = SubResource("CapsuleShape2D_dol1n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose2" unique_id=65920441]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_tx3db")
+animation = &"sittingsick"
+
+[node name="goose3" type="Area2D" parent="." unique_id=2062233551]
+position = Vector2(900, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goose3" unique_id=634770883]
+shape = SubResource("CapsuleShape2D_dol1n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose3" unique_id=600648820]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_tx3db")
+animation = &"sittingsick"
+
+[node name="goose4" type="Area2D" parent="." unique_id=784821229]
+position = Vector2(1200, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goose4" unique_id=2019332684]
+shape = SubResource("CapsuleShape2D_dol1n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose4" unique_id=1225138441]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_tx3db")
+animation = &"sittingsick"
+
+[node name="goose5" type="Area2D" parent="." unique_id=1030261854]
+position = Vector2(1500, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goose5" unique_id=413713908]
+shape = SubResource("CapsuleShape2D_dol1n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose5" unique_id=1517097917]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_tx3db")
+animation = &"sittingsick"
+
+[node name="goose6" type="Area2D" parent="." unique_id=626553785]
+position = Vector2(1800, 195)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goose6" unique_id=2108814370]
+shape = SubResource("CapsuleShape2D_dol1n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="goose6" unique_id=676196127]
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_tx3db")
 animation = &"sittingsick"
