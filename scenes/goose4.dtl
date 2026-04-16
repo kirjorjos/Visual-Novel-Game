@@ -3,6 +3,7 @@ join goose_sick right
 player: Ooh, another goose! Should I give this one a hug?
 - Yes
 	player: Oof... I don't feel so good...
+	do scene_changer.change_scene("TitleScreen.tscn")
 	[end_timeline]
 - No
 	player: More than halfway there!

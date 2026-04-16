@@ -3,6 +3,7 @@ join goose_sick right
 player: Another goose!! Should I go for the hug?
 - Yes
 	player: Oof, I don't feel so good...
+	do scene_changer.change_scene("TitleScreen.tscn")
 	[end_timeline]
 - No
 	player: Not today goose!!!

@@ -3,6 +3,7 @@ join goose_sick right
 player: This goose looks sick... should I pick it up and take it to the Wellness Center?
 - Yes
 	player: Oof... I don't feel so good...
+	do scene_changer.change_scene("TitleScreen.tscn")
 	[end_timeline]
 - No
 	player: Almost there!!

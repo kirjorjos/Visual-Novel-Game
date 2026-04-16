@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DialogicWrapper="*uid://beptkqmtqkyv5"
 Dialogic="*uid://ds2q0uclmolvu"
+scene_changer="*uid://cq70qkpvggev"
 
 [dialogic]
 

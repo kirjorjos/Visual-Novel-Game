@@ -1,4 +1,5 @@
 [background arg="#000000ff" fade="0.0"]
 join player center
 player: Hooray, you won and made it to class on time!!
+do scene_changer.change_scene("TitleScreen.tscn")
 [end_timeline]
